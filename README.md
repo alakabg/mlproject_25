@@ -1,1 +1,1 @@
-## ML project set up and synch git
+## ML project set up and sync git
