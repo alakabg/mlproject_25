@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 def error_message_detail(error, error_detail:sys):
     _, _, exc_tb = error_detail.exc_info()
@@ -16,10 +16,10 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
-# #Check the exception handling code
+# # #Check the exception handling code
 # if __name__ == "__main__":
 #     try:
 #         a = 1 / 0
 #     except Exception as e:
-#         logging.info("Dividing by zero error caught")   #Its not logged in log file. WHY?
+#         logging.info("Dividing by zero error caught")   #Its not logged in log file. WHY? --> Need to import logger.py ie src.logger tehn import logger
 #         raise CustomException(e, sys)
